@@ -4,3 +4,7 @@
   <input id="hidden" name="_method" value="delete">
   <input type="submit" id="delete" value="Delete Tweet">
 </form>
+<form method="post" action="tweets/<%=@tweet.id%>/edit">
+  <input id="hidden" name="_method" value="patch">
+  <input type="submit" id="delete" value="Edit Tweet">
+</form>
