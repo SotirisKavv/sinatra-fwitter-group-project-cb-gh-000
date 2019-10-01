@@ -17,4 +17,11 @@ class TweetsController < ApplicationController
     end
   end
 
+  post '/tweets' do
+    if !params[:content] == ""
+      @tweet = Tweet.create(content: params[:content], id: session[:user_id])
+    end
+    redirect '/tweets'
+  end
+
 end
