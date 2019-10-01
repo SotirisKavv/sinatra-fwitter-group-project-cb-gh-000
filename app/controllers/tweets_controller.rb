@@ -46,7 +46,7 @@ class TweetsController < ApplicationController
 
   delete '/tweet/:id' do
     tweet = Tweet.find_by_id(params[:id])
-    tweet.destroy
+    tweet.delete
     redirect '/tweets'
   end
 end
