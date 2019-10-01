@@ -24,7 +24,10 @@ class TweetsController < ApplicationController
     else
       redirect '/tweets/new'
     end
-
   end
 
+  get '/tweets/:id'
+    @tweet = Tweet.find_by_id(params[:id])
+
+    erb :'/tweets/show'
 end
